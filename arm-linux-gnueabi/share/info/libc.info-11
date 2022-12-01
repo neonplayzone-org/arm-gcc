@@ -1,4 +1,4 @@
-This is libc.info, produced by makeinfo version 6.7 from libc.texinfo.
+This is libc.info, produced by makeinfo version 6.8 from libc.texinfo.
 
 This is ‘The GNU C Library Reference Manual’, for version 2.36.9000.
 
@@ -5865,21 +5865,6 @@ the libraries.
 
    The header file ‘<argp.h>’ should be included to use argp.
 
-* Menu:
-
-* Argp Global Variables::
-* Argp Parsers::
-* Argp Option Vectors::
-* Argp Parser Functions::
-* Argp Children::
-* Argp Flags::
-* Argp Help Filtering::
-* Argp Help::
-* Argp Help Flags::
-* Argp Examples::
-* Argp User Customization::
-* Suboptions Example::
-
 25.3.1 The ‘argp_parse’ Function
 --------------------------------
 
@@ -7379,10 +7364,6 @@ variable to a comma-separated list of tokens.  Whitespace is ignored:
 ‘rmargin=N’
      This will word wrap help output at or before column N.  The default
      is 79.
-
-* Menu:
-
-* Suboptions::
 
 
 File: libc.info,  Node: Suboptions,  Next: Suboptions Example,  Prev: Argp,  Up: Parsing Program Arguments
