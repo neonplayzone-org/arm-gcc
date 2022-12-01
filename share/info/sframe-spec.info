@@ -1,4 +1,4 @@
-This is sframe-spec.info, produced by makeinfo version 6.7 from
+This is sframe-spec.info, produced by makeinfo version 6.8 from
 sframe-spec.texi.
 
 Copyright (C) 2021-2022 Free Software Foundation, Inc.
@@ -367,7 +367,8 @@ Bit offset   Name       Description
 4            'fdetype'  SFRAME_FDE_TYPE_PCMASK (1) or SFRAME_FDE_TYPE_PCINC (0).
                         *Note The SFrame FDE types::.
                         
-0-3          'fretype'  Choice of three SFrame FRE types. *Note The SFrame FRE types::.
+0-3          'fretype'  Choice of three SFrame FRE types.
+                        *Note The SFrame FRE types::.
 
 
 File: sframe-spec.info,  Node: The SFrame FDE types,  Next: The SFrame FRE types,  Prev: The SFrame FDE info word,  Up: SFrame Function Descriptor Entries
@@ -602,11 +603,11 @@ Node: SFrame Header5641
 Node: SFrame ABI/arch identifier10812
 Node: SFrame Function Descriptor Entries11778
 Node: The SFrame FDE info word14571
-Node: The SFrame FDE types15272
-Node: The SFrame FRE types16840
-Node: SFrame Frame Row Entries18396
-Node: The SFrame FRE info word20793
-Node: Index22587
+Node: The SFrame FDE types15296
+Node: The SFrame FRE types16864
+Node: SFrame Frame Row Entries18420
+Node: The SFrame FRE info word20817
+Node: Index22611
 
 End Tag Table
 
