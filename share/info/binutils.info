@@ -42,7 +42,7 @@ Introduction
 ************
 
 This brief manual contains documentation for the GNU binary utilities
-(NEON GCC) version 2.39.50:
+(GNU Binutils) version 2.39.50:
 
    This document is distributed under the terms of the GNU Free
 Documentation License version 1.3.  A copy of the license is included in
@@ -6135,35 +6135,35 @@ Binutils Index
 
 Tag Table:
 Node: Top1834
-Node: ar3567
-Node: ar cmdline6901
-Node: ar scripts20217
-Node: nm25903
-Node: objcopy41580
-Node: objdump82525
-Node: ranlib120075
-Node: size121674
-Node: strings125818
-Node: strip131653
-Node: c++filt141495
-Ref: c++filt-Footnote-1147356
-Node: addr2line147462
-Node: windmc153417
-Node: windres157076
-Node: dlltool163646
-Node: def file format177099
-Node: readelf179629
-Node: elfedit198760
-Node: Common Options202186
-Node: Selecting the Target System203220
-Node: Target Selection204148
-Node: Architecture Selection206129
-Node: debuginfod206957
-Node: Reporting Bugs207959
-Node: Bug Criteria208721
-Node: Bug Reporting209274
-Node: GNU Free Documentation License216141
-Node: Binutils Index241301
+Node: ar3571
+Node: ar cmdline6905
+Node: ar scripts20221
+Node: nm25907
+Node: objcopy41584
+Node: objdump82529
+Node: ranlib120079
+Node: size121678
+Node: strings125822
+Node: strip131657
+Node: c++filt141499
+Ref: c++filt-Footnote-1147360
+Node: addr2line147466
+Node: windmc153421
+Node: windres157080
+Node: dlltool163650
+Node: def file format177103
+Node: readelf179633
+Node: elfedit198764
+Node: Common Options202190
+Node: Selecting the Target System203224
+Node: Target Selection204152
+Node: Architecture Selection206133
+Node: debuginfod206961
+Node: Reporting Bugs207963
+Node: Bug Criteria208725
+Node: Bug Reporting209278
+Node: GNU Free Documentation License216145
+Node: Binutils Index241305
 
 End Tag Table
 
