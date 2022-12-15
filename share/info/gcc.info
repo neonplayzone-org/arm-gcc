@@ -54044,19 +54044,6 @@ to check the target platform type.
      'znver3'
           AMD Family 19h Zen version 3.
 
-     'x86-64'
-          Baseline x86-64 microarchitecture level (as defined in x86-64
-          psABI).
-
-     'x86-64-v2'
-          x86-64-v2 microarchitecture level.
-
-     'x86-64-v3'
-          x86-64-v3 microarchitecture level.
-
-     'x86-64-v4'
-          x86-64-v4 microarchitecture level.
-
      Here is an example:
           if (__builtin_cpu_is ("corei7"))
             {
@@ -54144,6 +54131,15 @@ to check the target platform type.
           AVX512VNNI instructions.
      'avx512bitalg'
           AVX512BITALG instructions.
+     'x86-64'
+          Baseline x86-64 microarchitecture level (as defined in x86-64
+          psABI).
+     'x86-64-v2'
+          x86-64-v2 microarchitecture level.
+     'x86-64-v3'
+          x86-64-v3 microarchitecture level.
+     'x86-64-v4'
+          x86-64-v4 microarchitecture level.
 
      Here is an example:
           if (__builtin_cpu_supports ("popcnt"))
@@ -67697,7 +67693,7 @@ Keyword Index
 * __builtin_cpu_supports:                Basic PowerPC Built-in Functions Available on all Configurations.
                                                              (line   70)
 * __builtin_cpu_supports <1>:            x86 Built-in Functions.
-                                                             (line  262)
+                                                             (line  249)
 * __builtin_ctz:                         Other Builtins.     (line  969)
 * __builtin_ctzl:                        Other Builtins.     (line  991)
 * __builtin_ctzll:                       Other Builtins.     (line 1014)
@@ -70674,114 +70670,114 @@ Node: TI C6X Built-in Functions2274272
 Node: TILE-Gx Built-in Functions2275323
 Node: TILEPro Built-in Functions2276448
 Node: x86 Built-in Functions2277556
-Node: x86 transactional memory intrinsics2342855
-Node: x86 control-flow protection intrinsics2346122
-Node: Target Format Checks2347893
-Node: Solaris Format Checks2348325
-Node: Darwin Format Checks2348751
-Node: Pragmas2349714
-Node: AArch64 Pragmas2350655
-Node: ARM Pragmas2351112
-Node: M32C Pragmas2351739
-Node: MeP Pragmas2352811
-Node: PRU Pragmas2354863
-Node: RS/6000 and PowerPC Pragmas2355441
-Node: S/390 Pragmas2356181
-Node: Darwin Pragmas2356747
-Node: Solaris Pragmas2357800
-Node: Symbol-Renaming Pragmas2358964
-Node: Structure-Layout Pragmas2360601
-Node: Weak Pragmas2362881
-Node: Diagnostic Pragmas2363616
-Node: Visibility Pragmas2368367
-Node: Push/Pop Macro Pragmas2369052
-Node: Function Specific Option Pragmas2370025
-Node: Loop-Specific Pragmas2371991
-Node: Unnamed Fields2373591
-Node: Thread-Local2375788
-Node: C99 Thread-Local Edits2377894
-Node: C++98 Thread-Local Edits2379892
-Node: Binary constants2383337
-Node: C++ Extensions2384008
-Node: C++ Volatiles2385638
-Node: Restricted Pointers2387986
-Node: Vague Linkage2389577
-Node: C++ Interface2393200
-Ref: C++ Interface-Footnote-12396997
-Node: Template Instantiation2397135
-Node: Bound member functions2403226
-Node: C++ Attributes2404758
-Node: Function Multiversioning2408830
-Node: Type Traits2410638
-Node: C++ Concepts2417609
-Node: Deprecated Features2419115
-Node: Backwards Compatibility2420940
-Node: Objective-C2422012
-Node: GNU Objective-C runtime API2422619
-Node: Modern GNU Objective-C runtime API2423626
-Node: Traditional GNU Objective-C runtime API2426062
-Node: Executing code before main2426789
-Node: What you can and what you cannot do in +load2429533
-Node: Type encoding2431903
-Node: Legacy type encoding2437269
-Node: @encode2438359
-Node: Method signatures2438904
-Node: Garbage Collection2440896
-Node: Constant string objects2443586
-Node: compatibility_alias2446095
-Node: Exceptions2446820
-Node: Synchronization2449530
-Node: Fast enumeration2450714
-Node: Using fast enumeration2451026
-Node: c99-like fast enumeration syntax2452237
-Node: Fast enumeration details2452940
-Node: Fast enumeration protocol2455280
-Node: Messaging with the GNU Objective-C runtime2458432
-Node: Dynamically registering methods2459804
-Node: Forwarding hook2461495
-Node: Compatibility2464535
-Node: Gcov2471091
-Node: Gcov Intro2471626
-Node: Invoking Gcov2474344
-Node: Gcov and Optimization2497077
-Node: Gcov Data Files2500830
-Node: Cross-profiling2502239
-Node: Gcov-tool2504093
-Node: Gcov-tool Intro2504518
-Node: Invoking Gcov-tool2506488
-Node: Gcov-dump2509066
-Node: Gcov-dump Intro2509389
-Node: Invoking Gcov-dump2509656
-Node: lto-dump2510313
-Node: lto-dump Intro2510612
-Node: Invoking lto-dump2510862
-Node: Trouble2511958
-Node: Actual Bugs2513375
-Node: Interoperation2513822
-Node: Incompatibilities2520713
-Node: Fixed Headers2528865
-Node: Standard Libraries2530523
-Node: Disappointments2531895
-Node: C++ Misunderstandings2536254
-Node: Static Definitions2537065
-Node: Name lookup2538118
-Ref: Name lookup-Footnote-12542899
-Node: Temporaries2543088
-Node: Copy Assignment2545064
-Node: Non-bugs2546899
-Node: Warnings and Errors2557405
-Node: Bugs2559167
-Node: Bug Criteria2559634
-Node: Bug Reporting2561844
-Node: Service2562062
-Node: Contributing2562883
-Node: Funding2563629
-Node: GNU Project2566119
-Node: Copying2566767
-Node: GNU Free Documentation License2604278
-Node: Contributors2629398
-Node: Option Index2670372
-Node: Keyword Index2969471
+Node: x86 transactional memory intrinsics2342851
+Node: x86 control-flow protection intrinsics2346118
+Node: Target Format Checks2347889
+Node: Solaris Format Checks2348321
+Node: Darwin Format Checks2348747
+Node: Pragmas2349710
+Node: AArch64 Pragmas2350651
+Node: ARM Pragmas2351108
+Node: M32C Pragmas2351735
+Node: MeP Pragmas2352807
+Node: PRU Pragmas2354859
+Node: RS/6000 and PowerPC Pragmas2355437
+Node: S/390 Pragmas2356177
+Node: Darwin Pragmas2356743
+Node: Solaris Pragmas2357796
+Node: Symbol-Renaming Pragmas2358960
+Node: Structure-Layout Pragmas2360597
+Node: Weak Pragmas2362877
+Node: Diagnostic Pragmas2363612
+Node: Visibility Pragmas2368363
+Node: Push/Pop Macro Pragmas2369048
+Node: Function Specific Option Pragmas2370021
+Node: Loop-Specific Pragmas2371987
+Node: Unnamed Fields2373587
+Node: Thread-Local2375784
+Node: C99 Thread-Local Edits2377890
+Node: C++98 Thread-Local Edits2379888
+Node: Binary constants2383333
+Node: C++ Extensions2384004
+Node: C++ Volatiles2385634
+Node: Restricted Pointers2387982
+Node: Vague Linkage2389573
+Node: C++ Interface2393196
+Ref: C++ Interface-Footnote-12396993
+Node: Template Instantiation2397131
+Node: Bound member functions2403222
+Node: C++ Attributes2404754
+Node: Function Multiversioning2408826
+Node: Type Traits2410634
+Node: C++ Concepts2417605
+Node: Deprecated Features2419111
+Node: Backwards Compatibility2420936
+Node: Objective-C2422008
+Node: GNU Objective-C runtime API2422615
+Node: Modern GNU Objective-C runtime API2423622
+Node: Traditional GNU Objective-C runtime API2426058
+Node: Executing code before main2426785
+Node: What you can and what you cannot do in +load2429529
+Node: Type encoding2431899
+Node: Legacy type encoding2437265
+Node: @encode2438355
+Node: Method signatures2438900
+Node: Garbage Collection2440892
+Node: Constant string objects2443582
+Node: compatibility_alias2446091
+Node: Exceptions2446816
+Node: Synchronization2449526
+Node: Fast enumeration2450710
+Node: Using fast enumeration2451022
+Node: c99-like fast enumeration syntax2452233
+Node: Fast enumeration details2452936
+Node: Fast enumeration protocol2455276
+Node: Messaging with the GNU Objective-C runtime2458428
+Node: Dynamically registering methods2459800
+Node: Forwarding hook2461491
+Node: Compatibility2464531
+Node: Gcov2471087
+Node: Gcov Intro2471622
+Node: Invoking Gcov2474340
+Node: Gcov and Optimization2497073
+Node: Gcov Data Files2500826
+Node: Cross-profiling2502235
+Node: Gcov-tool2504089
+Node: Gcov-tool Intro2504514
+Node: Invoking Gcov-tool2506484
+Node: Gcov-dump2509062
+Node: Gcov-dump Intro2509385
+Node: Invoking Gcov-dump2509652
+Node: lto-dump2510309
+Node: lto-dump Intro2510608
+Node: Invoking lto-dump2510858
+Node: Trouble2511954
+Node: Actual Bugs2513371
+Node: Interoperation2513818
+Node: Incompatibilities2520709
+Node: Fixed Headers2528861
+Node: Standard Libraries2530519
+Node: Disappointments2531891
+Node: C++ Misunderstandings2536250
+Node: Static Definitions2537061
+Node: Name lookup2538114
+Ref: Name lookup-Footnote-12542895
+Node: Temporaries2543084
+Node: Copy Assignment2545060
+Node: Non-bugs2546895
+Node: Warnings and Errors2557401
+Node: Bugs2559163
+Node: Bug Criteria2559630
+Node: Bug Reporting2561840
+Node: Service2562058
+Node: Contributing2562879
+Node: Funding2563625
+Node: GNU Project2566115
+Node: Copying2566763
+Node: GNU Free Documentation License2604274
+Node: Contributors2629394
+Node: Option Index2670368
+Node: Keyword Index2969467
 
 End Tag Table
 
