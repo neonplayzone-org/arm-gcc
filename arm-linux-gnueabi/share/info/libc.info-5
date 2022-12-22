@@ -3808,9 +3808,10 @@ way to make sure you have all the right prototypes is to just include
 
      The return value is the number of characters generated for the
      given input, excluding the trailing null.  If not all output fits
-     into the provided buffer a negative value is returned.  You should
-     try again with a bigger output string.  _Note:_ this is different
-     from how ‘snprintf’ handles this situation.
+     into the provided buffer a negative value is returned, and ‘errno’
+     is set to ‘E2BIG’.  (The setting of ‘errno’ is a GNU extension.)
+     You should try again with a bigger output string.  _Note:_ this is
+     different from how ‘snprintf’ handles this situation.
 
      Note that the corresponding narrow stream function takes fewer
      parameters.  ‘swprintf’ in fact corresponds to the ‘snprintf’
