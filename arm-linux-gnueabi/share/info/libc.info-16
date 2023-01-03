@@ -7269,7 +7269,7 @@ Function and Macro Index
 * sinl:                                  Trig Functions.      (line  20)
 * sleep:                                 Sleeping.            (line  14)
 * snprintf:                              Formatted Output Functions.
-                                                              (line 100)
+                                                              (line 101)
 * socket:                                Creating a Socket.   (line   9)
 * socketpair:                            Socket Pairs.        (line  13)
 * sprintf:                               Formatted Output Functions.
