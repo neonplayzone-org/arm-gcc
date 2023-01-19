@@ -2230,7 +2230,7 @@ better than not using it.  At present, the only way to do a more
 thorough job is to write the entire sensitive operation in assembly
 language.  We anticipate that future compilers will recognize calls to
 ‘explicit_bzero’ and take appropriate steps to erase all the copies of
-the affected data, whereever they may be.
+the affected data, wherever they may be.
 
  -- Function: void explicit_bzero (void *BLOCK, size_t LEN)
 
