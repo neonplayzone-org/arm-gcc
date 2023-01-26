@@ -3287,9 +3287,10 @@ Here is a table summarizing what all the different conversions do:
      lower-case letters and ‘%X’ uses upper-case.  *Note Integer
      Conversions::, for details.
 
-‘%f’
+‘%f’, ‘%F’
      Print a floating-point number in normal (fixed-point) notation.
-     *Note Floating-Point Conversions::, for details.
+     ‘%f’ uses lower-case letters and ‘%F’ uses upper-case.  *Note
+     Floating-Point Conversions::, for details.
 
 ‘%e’, ‘%E’
      Print a floating-point number in exponential notation.  ‘%e’ uses
@@ -3499,11 +3500,12 @@ File: libc.info,  Node: Floating-Point Conversions,  Next: Other Output Conversi
 ----------------------------------
 
 This section discusses the conversion specifications for floating-point
-numbers: the ‘%f’, ‘%e’, ‘%E’, ‘%g’, and ‘%G’ conversions.
+numbers: the ‘%f’, ‘%F’, ‘%e’, ‘%E’, ‘%g’, and ‘%G’ conversions.
 
-   The ‘%f’ conversion prints its argument in fixed-point notation,
-producing output of the form [‘-’]DDD‘.’DDD, where the number of digits
-following the decimal point is controlled by the precision you specify.
+   The ‘%f’ and ‘%F’ conversions print their argument in fixed-point
+notation, producing output of the form [‘-’]DDD‘.’DDD, where the number
+of digits following the decimal point is controlled by the precision you
+specify.
 
    The ‘%e’ conversion prints its argument in exponential notation,
 producing output of the form [‘-’]D‘.’DDD‘e’[‘+’|‘-’]DD.  Again, the
@@ -3514,10 +3516,10 @@ instead of ‘e’.
 
    The ‘%g’ and ‘%G’ conversions print the argument in the style of ‘%e’
 or ‘%E’ (respectively) if the exponent would be less than -4 or greater
-than or equal to the precision; otherwise they use the ‘%f’ style.  A
-precision of ‘0’, is taken as 1.  Trailing zeros are removed from the
-fractional portion of the result and a decimal-point character appears
-only if it is followed by a digit.
+than or equal to the precision; otherwise they use the ‘%f’ or ‘%F’
+style.  A precision of ‘0’, is taken as 1.  Trailing zeros are removed
+from the fractional portion of the result and a decimal-point character
+appears only if it is followed by a digit.
 
    The ‘%a’ and ‘%A’ conversions are meant for representing
 floating-point numbers exactly in textual form so that they can be
@@ -3542,10 +3544,10 @@ as necessary to represent the value exactly.
    If the value to be printed represents infinity or a NaN, the output
 is [‘-’]‘inf’ or ‘nan’ respectively if the conversion specifier is ‘%a’,
 ‘%e’, ‘%f’, or ‘%g’ and it is [‘-’]‘INF’ or ‘NAN’ respectively if the
-conversion is ‘%A’, ‘%E’, or ‘%G’.  On some implementations, a NaN may
-result in longer output with information about the payload of the NaN;
-ISO C2X defines a macro ‘_PRINTF_NAN_LEN_MAX’ giving the maximum length
-of such output.
+conversion is ‘%A’, ‘%E’, ‘%F’ or ‘%G’.  On some implementations, a NaN
+may result in longer output with information about the payload of the
+NaN; ISO C2X defines a macro ‘_PRINTF_NAN_LEN_MAX’ giving the maximum
+length of such output.
 
    The following flags can be used to modify the behavior:
 
@@ -3578,7 +3580,7 @@ of such output.
      specified.
 
    The precision specifies how many digits follow the decimal-point
-character for the ‘%f’, ‘%e’, and ‘%E’ conversions.  For these
+character for the ‘%f’, ‘%F’, ‘%e’, and ‘%E’ conversions.  For these
 conversions, the default precision is ‘6’.  If the precision is
 explicitly ‘0’, this suppresses the decimal point character entirely.
 For the ‘%g’ and ‘%G’ conversions, the precision specifies how many
@@ -4885,7 +4887,7 @@ Here is a table that summarizes the various conversion specifications:
      Matches an unsigned integer written in hexadecimal radix.  *Note
      Numeric Input Conversions::.
 
-‘%e’, ‘%f’, ‘%g’, ‘%E’, ‘%G’
+‘%e’, ‘%f’, ‘%g’, ‘%E’, ‘%F’, ‘%G’
      Matches an optionally signed floating-point number.  *Note Numeric
      Input Conversions::.
 
@@ -5042,8 +5044,8 @@ specify other sizes of integer:
 
      This modifier was introduced in ISO C99.
 
-   All of the ‘%e’, ‘%f’, ‘%g’, ‘%E’, and ‘%G’ input conversions are
-interchangeable.  They all match an optionally signed floating point
+   All of the ‘%e’, ‘%f’, ‘%g’, ‘%E’, ‘%F’ and ‘%G’ input conversions
+are interchangeable.  They all match an optionally signed floating point
 number, in the same syntax as for the ‘strtod’ function (*note Parsing
 of Floats::).
 

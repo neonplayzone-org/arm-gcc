@@ -6982,7 +6982,7 @@ clogf         3 + i 0         3 + i 1         2 + i 1         3 + i 1         3 
 clog          2 + i 1         3 + i 1         3 + i 1         3 + i 1         3 + i 1
 clogl         2 + i 1         2 + i 1         3 + i 1         -               2 + i 1
 clogf128      2 + i 1         -               -               -               -
-clog10f       4 + i 1         4 + i 2         2 + i 1         4 + i 2         4 + i 2
+clog10f       4 + i 2         4 + i 2         2 + i 1         4 + i 2         4 + i 2
 clog10        3 + i 2         3 + i 2         2 + i 1         3 + i 2         3 + i 2
 clog10l       2 + i 1         2 + i 2         3 + i 2         -               2 + i 2
 clog10f128    2 + i 2         -               -               -               -
@@ -7591,7 +7591,7 @@ hypot         1               1               1               1               1
 hypotl        1               1               1               -               1
 hypotf128     -               -               -               -               -
 j0f           9               9               9               8               9
-j0            3               2               4               2               2
+j0            3               2               4               2               3
 j0l           2               2               2               -               2
 j0f128        -               -               -               -               -
 j1f           9               9               9               8               9
@@ -7607,7 +7607,7 @@ lgamma        3               4               3               4               4
 lgammal       5               5               5               -               5
 lgammaf128    -               -               -               -               -
 logf          -               -               -               1               1
-log           1               -               1               -               -
+log           1               -               1               -               1
 logl          1               1               1               -               1
 logf128       -               -               -               -               -
 log10f        2               2               2               2               2
