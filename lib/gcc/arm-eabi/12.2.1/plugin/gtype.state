@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.2.1 20230202")
+(!version  "12.2.1 20230209")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 227 0
@@ -28055,19 +28055,19 @@
   (!fields 4 
    (!pair  "decl"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8396)
+    (!srcfileloc  "cp/cp-tree.h" 8397)
     nil )
    (!pair  "body"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8397)
+    (!srcfileloc  "cp/cp-tree.h" 8398)
     nil )
    (!pair  "parms"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8398)
+    (!srcfileloc  "cp/cp-tree.h" 8399)
     nil )
    (!pair  "result"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-tree.h" 8399)
+    (!srcfileloc  "cp/cp-tree.h" 8400)
     nil )
   )
   (!options 
@@ -29973,7 +29973,7 @@
   nil 0 nil nil )
  
  (!type struct 2237 nil  gc_used "module_hasher"
-  (!srcfileloc  "fortran/trans-decl.cc" 5070)
+  (!srcfileloc  "fortran/trans-decl.cc" 5071)
   (!fields 0 )
   nil 16 nil nil )
  
@@ -29982,11 +29982,11 @@
    (!type already_seen 2238)
   )
   gc_pointed_to "hash_table<module_hasher>"
-  (!srcfileloc  "fortran/trans-decl.cc" 5070)
+  (!srcfileloc  "fortran/trans-decl.cc" 5071)
   (!fields 1 
    (!pair  "module_hasher"
     (!type already_seen 2237)
-    (!srcfileloc  "fortran/trans-decl.cc" 5070)
+    (!srcfileloc  "fortran/trans-decl.cc" 5071)
     nil )
   )
  )
@@ -30762,11 +30762,11 @@
   nil )
  (!pair  "module_hasher"
   (!type already_seen 2237)
-  (!srcfileloc  "fortran/trans-decl.cc" 5070)
+  (!srcfileloc  "fortran/trans-decl.cc" 5071)
   nil )
  (!pair  "hash_table<module_hasher>"
   (!type already_seen 2238)
-  (!srcfileloc  "fortran/trans-decl.cc" 5070)
+  (!srcfileloc  "fortran/trans-decl.cc" 5071)
   nil )
  (!pair  "tree_frame_info"
   (!type already_seen 649)
@@ -35211,7 +35211,7 @@
   nil )
  (!pair  "module_htab"
   (!type already_seen 2239)
-  (!srcfileloc  "fortran/trans-decl.cc" 5070)
+  (!srcfileloc  "fortran/trans-decl.cc" 5071)
   nil )
  (!pair  "saved_local_decls"
   (!type already_seen 23)
@@ -35347,7 +35347,7 @@
   nil )
  (!pair  "deleted_copy_types"
   (!type already_seen 463)
-  (!srcfileloc  "cp/tree.cc" 4416)
+  (!srcfileloc  "cp/tree.cc" 4430)
   nil )
  (!pair  "list_hash_table"
   (!type already_seen 2210)
