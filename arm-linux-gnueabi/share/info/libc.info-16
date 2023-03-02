@@ -3878,6 +3878,7 @@ Concept Index
 * generation of signals:                 Signal Generation.   (line   6)
 * generic i/o control operations:        IOCTLs.              (line   6)
 * globbing:                              Globbing.            (line   6)
+* gmon tunables:                         gmon Tunables.       (line   6)
 * gnu allocator:                         The GNU Allocator.   (line   6)
 * graphic character:                     Classification of Characters.
                                                               (line 126)
@@ -5103,6 +5104,8 @@ Type Index
                                                               (line  11)
 * glibc.cpu.name:                        Hardware Capability Tunables.
                                                               (line  43)
+* glibc.cpu.prefer_map_32bit_exec:       Hardware Capability Tunables.
+                                                              (line 112)
 * glibc.cpu.x86_data_cache_size:         Hardware Capability Tunables.
                                                               (line  51)
 * glibc.cpu.x86_ibt:                     Hardware Capability Tunables.
@@ -5125,6 +5128,7 @@ Type Index
 * glibc.elision.skip_trylock_internal_abort: Elision Tunables.
                                                               (line  57)
 * glibc.elision.tries:                   Elision Tunables.    (line  48)
+* glibc.gmon:                            gmon Tunables.       (line   6)
 * glibc.malloc:                          Memory Allocation Tunables.
                                                               (line   6)
 * glibc.malloc.arena_max:                Memory Allocation Tunables.
@@ -5155,6 +5159,8 @@ Type Index
                                                               (line  74)
 * glibc.mem:                             Memory Related Tunables.
                                                               (line   6)
+* glibc.mem.maxarcs:                     gmon Tunables.       (line  37)
+* glibc.mem.minarcs:                     gmon Tunables.       (line  27)
 * glibc.mem.tagging:                     Memory Related Tunables.
                                                               (line  10)
 * glibc.pthread:                         POSIX Thread Tunables.
@@ -5600,9 +5606,9 @@ Function and Macro Index
                                                               (line  47)
 * atexit:                                Cleanups on Exit.    (line  14)
 * atof:                                  Parsing of Floats.   (line 136)
-* atoi:                                  Parsing of Integers. (line 264)
-* atol:                                  Parsing of Integers. (line 254)
-* atoll:                                 Parsing of Integers. (line 272)
+* atoi:                                  Parsing of Integers. (line 268)
+* atol:                                  Parsing of Integers. (line 258)
+* atoll:                                 Parsing of Integers. (line 276)
 * backtrace:                             Backtraces.          (line  15)
 * backtrace_symbols:                     Backtraces.          (line  36)
 * backtrace_symbols_fd:                  Backtraces.          (line  69)
@@ -7445,19 +7451,19 @@ Function and Macro Index
 * strtof:                                Parsing of Floats.   (line  84)
 * strtofN:                               Parsing of Floats.   (line  99)
 * strtofNx:                              Parsing of Floats.   (line 100)
-* strtoimax:                             Parsing of Integers. (line 202)
+* strtoimax:                             Parsing of Integers. (line 206)
 * strtok:                                Finding Tokens in a String.
                                                               (line  11)
 * strtok_r:                              Finding Tokens in a String.
                                                               (line 140)
 * strtol:                                Parsing of Integers. (line  12)
 * strtold:                               Parsing of Floats.   (line  85)
-* strtoll:                               Parsing of Integers. (line 113)
-* strtoq:                                Parsing of Integers. (line 142)
-* strtoul:                               Parsing of Integers. (line  83)
-* strtoull:                              Parsing of Integers. (line 161)
-* strtoumax:                             Parsing of Integers. (line 231)
-* strtouq:                               Parsing of Integers. (line 183)
+* strtoll:                               Parsing of Integers. (line 117)
+* strtoq:                                Parsing of Integers. (line 146)
+* strtoul:                               Parsing of Integers. (line  87)
+* strtoull:                              Parsing of Integers. (line 165)
+* strtoumax:                             Parsing of Integers. (line 235)
+* strtouq:                               Parsing of Integers. (line 187)
 * strverscmp:                            String/Array Comparison.
                                                               (line 218)
 * strxfrm:                               Collation Functions. (line  86)
@@ -7738,19 +7744,19 @@ Function and Macro Index
 * wcstof:                                Parsing of Floats.   (line 112)
 * wcstofN:                               Parsing of Floats.   (line 115)
 * wcstofNx:                              Parsing of Floats.   (line 116)
-* wcstoimax:                             Parsing of Integers. (line 220)
+* wcstoimax:                             Parsing of Integers. (line 224)
 * wcstok:                                Finding Tokens in a String.
                                                               (line  53)
-* wcstol:                                Parsing of Integers. (line  72)
+* wcstol:                                Parsing of Integers. (line  76)
 * wcstold:                               Parsing of Floats.   (line 113)
-* wcstoll:                               Parsing of Integers. (line 131)
+* wcstoll:                               Parsing of Integers. (line 135)
 * wcstombs:                              Non-reentrant String Conversion.
                                                               (line  57)
-* wcstoq:                                Parsing of Integers. (line 150)
-* wcstoul:                               Parsing of Integers. (line 102)
-* wcstoull:                              Parsing of Integers. (line 172)
-* wcstoumax:                             Parsing of Integers. (line 243)
-* wcstouq:                               Parsing of Integers. (line 191)
+* wcstoq:                                Parsing of Integers. (line 154)
+* wcstoul:                               Parsing of Integers. (line 106)
+* wcstoull:                              Parsing of Integers. (line 176)
+* wcstoumax:                             Parsing of Integers. (line 247)
+* wcstouq:                               Parsing of Integers. (line 195)
 * wcswcs:                                Search Functions.    (line 199)
 * wcsxfrm:                               Collation Functions. (line 118)
 * wctob:                                 Converting a Character.
