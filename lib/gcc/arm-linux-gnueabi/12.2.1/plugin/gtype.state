@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.2.1 20230316")
+(!version  "12.2.1 20230323")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 232 0
@@ -25429,11 +25429,11 @@
    (!type already_seen 1685)
   )
   gc_pointed_to "hash_map<char*,unsigned>"
-  (!srcfileloc  "cgraphclones.cc" 466)
+  (!srcfileloc  "cgraphclones.cc" 476)
   (!fields 1 
    (!pair  "unsigned"
     (!type already_seen 1396)
-    (!srcfileloc  "cgraphclones.cc" 466)
+    (!srcfileloc  "cgraphclones.cc" 476)
     nil )
   )
  )
@@ -28873,19 +28873,19 @@
   nil 0 nil nil )
  
  (!type struct 2075 nil  gc_pointed_to "source_location_table_entry"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3171)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3173)
   (!fields 3 
    (!pair  "loc"
     (!type already_seen 2)
-    (!srcfileloc  "cp/cp-gimplify.cc" 3168)
+    (!srcfileloc  "cp/cp-gimplify.cc" 3170)
     nil )
    (!pair  "uid"
     (!type already_seen 2)
-    (!srcfileloc  "cp/cp-gimplify.cc" 3169)
+    (!srcfileloc  "cp/cp-gimplify.cc" 3171)
     nil )
    (!pair  "var"
     (!type already_seen 23)
-    (!srcfileloc  "cp/cp-gimplify.cc" 3170)
+    (!srcfileloc  "cp/cp-gimplify.cc" 3172)
     nil )
   )
   (!options 
@@ -28894,7 +28894,7 @@
   516 nil nil )
  
  (!type struct 2076 nil  gc_used "source_location_table_entry_hash"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3247)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3249)
   (!fields 0 )
   nil 516 nil nil )
  
@@ -28903,11 +28903,11 @@
    (!type already_seen 2077)
   )
   gc_pointed_to "hash_table<source_location_table_entry_hash>"
-  (!srcfileloc  "cp/cp-gimplify.cc" 3247)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3249)
   (!fields 1 
    (!pair  "source_location_table_entry_hash"
     (!type already_seen 2076)
-    (!srcfileloc  "cp/cp-gimplify.cc" 3247)
+    (!srcfileloc  "cp/cp-gimplify.cc" 3249)
     nil )
   )
  )
@@ -28955,7 +28955,7 @@
   nil 0 nil nil )
  
  (!type struct 2084 nil  gc_used "typename_hasher"
-  (!srcfileloc  "cp/decl.cc" 4043)
+  (!srcfileloc  "cp/decl.cc" 4044)
   (!fields 0 )
   nil 516 nil nil )
  
@@ -28964,11 +28964,11 @@
    (!type already_seen 2085)
   )
   gc_pointed_to "hash_table<typename_hasher>"
-  (!srcfileloc  "cp/decl.cc" 4043)
+  (!srcfileloc  "cp/decl.cc" 4044)
   (!fields 1 
    (!pair  "typename_hasher"
     (!type already_seen 2084)
-    (!srcfileloc  "cp/decl.cc" 4043)
+    (!srcfileloc  "cp/decl.cc" 4044)
     nil )
   )
  )
@@ -30277,21 +30277,21 @@
   nil 0 nil nil )
  
  (!type user_struct 2272 nil  gc_unused "int_hash<unsigned,0,UINT_MAX>"
-  (!srcfileloc  "lto/lto-common.cc" 1799)
+  (!srcfileloc  "lto/lto-common.cc" 1803)
   (!fields 3 
    (!pair  "UINT_MAX"
     (!type undefined 2273 nil  gc_unused "UINT_MAX"
-     (!srcfileloc  "lto/lto-common.cc" 1799)
+     (!srcfileloc  "lto/lto-common.cc" 1803)
     )
-    (!srcfileloc  "lto/lto-common.cc" 1799)
+    (!srcfileloc  "lto/lto-common.cc" 1803)
     nil )
    (!pair  "0"
     (!type already_seen 2149)
-    (!srcfileloc  "lto/lto-common.cc" 1799)
+    (!srcfileloc  "lto/lto-common.cc" 1803)
     nil )
    (!pair  "unsigned"
     (!type already_seen 1396)
-    (!srcfileloc  "lto/lto-common.cc" 1799)
+    (!srcfileloc  "lto/lto-common.cc" 1803)
     nil )
   )
  )
@@ -30675,15 +30675,15 @@
   nil )
  (!pair  "code_id_hash"
   (!type already_seen 2272)
-  (!srcfileloc  "lto/lto-common.cc" 1799)
+  (!srcfileloc  "lto/lto-common.cc" 1803)
   nil )
  (!pair  "UINT_MAX"
   (!type already_seen 2273)
-  (!srcfileloc  "lto/lto-common.cc" 1799)
+  (!srcfileloc  "lto/lto-common.cc" 1803)
   nil )
  (!pair  "int_hash<unsigned,0,UINT_MAX>"
   (!type already_seen 2272)
-  (!srcfileloc  "lto/lto-common.cc" 1799)
+  (!srcfileloc  "lto/lto-common.cc" 1803)
   nil )
  (!pair  "go_char_p"
   (!type already_seen 9)
@@ -31135,11 +31135,11 @@
   nil )
  (!pair  "typename_hasher"
   (!type already_seen 2084)
-  (!srcfileloc  "cp/decl.cc" 4043)
+  (!srcfileloc  "cp/decl.cc" 4044)
   nil )
  (!pair  "hash_table<typename_hasher>"
   (!type already_seen 2085)
-  (!srcfileloc  "cp/decl.cc" 4043)
+  (!srcfileloc  "cp/decl.cc" 4044)
   nil )
  (!pair  "incomplete_var"
   (!type already_seen 2079)
@@ -31159,11 +31159,11 @@
   nil )
  (!pair  "source_location_table_entry_hash"
   (!type already_seen 2076)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3247)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3249)
   nil )
  (!pair  "hash_table<source_location_table_entry_hash>"
   (!type already_seen 2077)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3247)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3249)
   nil )
  (!pair  "coroutine_info_hasher"
   (!type already_seen 2056)
@@ -31963,7 +31963,7 @@
   nil )
  (!pair  "hash_map<char*,unsigned>"
   (!type already_seen 1685)
-  (!srcfileloc  "cgraphclones.cc" 466)
+  (!srcfileloc  "cgraphclones.cc" 476)
   nil )
  (!pair  "uid_range_p"
   (!type already_seen 1681)
@@ -34552,14 +34552,14 @@
   nil )
  (!pair  "real_file_decl_data"
   (!type already_seen 322)
-  (!srcfileloc  "lto/lto-common.cc" 2698)
+  (!srcfileloc  "lto/lto-common.cc" 2702)
   (!options 
    (!option length string  "real_file_count + 1")
   )
  )
  (!pair  "all_file_decl_data"
   (!type already_seen 322)
-  (!srcfileloc  "lto/lto-common.cc" 2665)
+  (!srcfileloc  "lto/lto-common.cc" 2669)
   (!options 
    (!option length string  "lto_stats.num_input_files + 1")
   )
@@ -35649,22 +35649,22 @@
   nil )
  (!pair  "start_cleanup_cnt"
   (!type already_seen 2)
-  (!srcfileloc  "cp/decl.cc" 9381)
+  (!srcfileloc  "cp/decl.cc" 9384)
   nil )
  (!pair  "decomp_type_table"
   (!type already_seen 930)
-  (!srcfileloc  "cp/decl.cc" 8834)
+  (!srcfileloc  "cp/decl.cc" 8837)
   (!options 
    (!option cache string  "")
   )
  )
  (!pair  "typename_htab"
   (!type already_seen 2086)
-  (!srcfileloc  "cp/decl.cc" 4043)
+  (!srcfileloc  "cp/decl.cc" 4044)
   nil )
  (!pair  "local_entities"
   (!type already_seen 84)
-  (!srcfileloc  "cp/decl.cc" 903)
+  (!srcfileloc  "cp/decl.cc" 904)
   (!options 
    (!option deletable string  "")
   )
@@ -35686,15 +35686,15 @@
   nil )
  (!pair  "source_location_id"
   (!type already_seen 2)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3249)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3251)
   nil )
  (!pair  "source_location_table"
   (!type already_seen 2078)
-  (!srcfileloc  "cp/cp-gimplify.cc" 3248)
+  (!srcfileloc  "cp/cp-gimplify.cc" 3250)
   nil )
  (!pair  "fold_cache"
   (!type already_seen 393)
-  (!srcfileloc  "cp/cp-gimplify.cc" 2405)
+  (!srcfileloc  "cp/cp-gimplify.cc" 2407)
   (!options 
    (!option deletable string  "")
   )
@@ -35886,11 +35886,11 @@
   nil )
  (!pair  "dvirt_fn"
   (!type already_seen 23)
-  (!srcfileloc  "cp/class.cc" 9843)
+  (!srcfileloc  "cp/class.cc" 9851)
   nil )
  (!pair  "abort_fndecl_addr"
   (!type already_seen 23)
-  (!srcfileloc  "cp/class.cc" 9842)
+  (!srcfileloc  "cp/class.cc" 9850)
   nil )
  (!pair  "enum_to_min_precision"
   (!type already_seen 2031)
@@ -36071,13 +36071,13 @@
   nil )
  (!pair  "ext_block"
   (!type already_seen 23)
-  (!srcfileloc  "c/c-decl.cc" 12223)
+  (!srcfileloc  "c/c-decl.cc" 12226)
   nil )
  (!pair  "last_structptr_types"
   (!type array 2344 nil  gc_used "builtin_structptr_type_count" 
    (!type already_seen 23)
   )
-  (!srcfileloc  "c/c-decl.cc" 1663)
+  (!srcfileloc  "c/c-decl.cc" 1666)
   nil )
  (!pair  "c_inline_statics"
   (!type already_seen 1873)
@@ -36419,7 +36419,7 @@
  )
  (!pair  "clone_fn_ids"
   (!type already_seen 1686)
-  (!srcfileloc  "cgraphclones.cc" 466)
+  (!srcfileloc  "cgraphclones.cc" 476)
   nil )
  (!pair  "arm_previous_fndecl"
   (!type already_seen 23)
