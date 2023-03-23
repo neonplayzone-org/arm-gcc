@@ -9,7 +9,7 @@
 BASEVER, DATESTAMP, DEVPHASE, and REVISION are defined by the
 Makefile.  */
 
-#define version_string "12.2.1 20230316"
+#define version_string "12.2.1 20230323"
 #define pkgversion_string "(NEON GCC) "
 
 /* This is the location of the online document giving instructions for
