@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "12.2.1 20230330")
+(!version  "12.2.1 20230406")
 (!srcdir  "../../gcc/gcc")
 (!languages 10 ada c cp d fortran go jit lto objc objcp)
 (!fileslist 227 0
@@ -36852,7 +36852,7 @@
   nil )
  (!pair  "stack_check_libfunc"
   (!type already_seen 99)
-  (!srcfileloc  "explow.cc" 1638)
+  (!srcfileloc  "explow.cc" 1643)
   nil )
  (!pair  "hard_reg_clobbers"
   (!type array 2361 nil  gc_used "NUM_MACHINE_MODES" 
