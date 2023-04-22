@@ -1,6 +1,6 @@
 This is libc.info, produced by makeinfo version 6.8 from libc.texinfo.
 
-This is ‘The GNU C Library Reference Manual’, for version 2.36.9000.
+This is ‘The GNU C Library Reference Manual’, for version 2.37.9000.
 
    Copyright © 1993–2023 Free Software Foundation, Inc.
 
@@ -2172,7 +2172,7 @@ File: libc.info,  Node: Top,  Next: Introduction,  Prev: (dir),  Up: (dir)
 Main Menu
 *********
 
-This is ‘The GNU C Library Reference Manual’, for version 2.36.9000.
+This is ‘The GNU C Library Reference Manual’, for version 2.37.9000.
 
    Copyright © 1993–2023 Free Software Foundation, Inc.
 
@@ -3486,6 +3486,9 @@ Tunables
 				  capabilities seen by the GNU C Library
 * Memory Related Tunables::  Tunables that control the use of memory by
 			     the GNU C Library.
+* gmon Tunables::  Tunables that control the gmon profiler, used in
+                   conjunction with gprof
+
 
 Language Features
 
@@ -4950,8 +4953,7 @@ on semantics undefined within the standard.
      various library functions.  If defined to 2, even stricter checks
      are applied.  If defined to 3, the GNU C Library may also use
      checks that may have an additional performance overhead.  *Note
-     Fortification of function calls: Source Fortification. for more
-     information.
+     Fortification of function calls: Source Fortification.
 
  -- Macro: _DYNAMIC_STACK_SIZE_SOURCE
 
