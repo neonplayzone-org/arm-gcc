@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "10.4.1 20230130")
+(!version  "10.4.1 20230422")
 (!srcdir  "../../gcc/gcc")
 (!languages 11 ada brig c cp d fortran go jit lto objc objcp)
 (!fileslist 217
@@ -25339,15 +25339,15 @@
    (!type already_seen 1768)
   )
   gc_pointed_to "vec<const_char_p,va_gc>"
-  (!srcfileloc  "c-family/c-common.c" 5531)
+  (!srcfileloc  "c-family/c-common.c" 5536)
   (!fields 2 
    (!pair  "va_gc"
     (!type already_seen 79)
-    (!srcfileloc  "c-family/c-common.c" 5531)
+    (!srcfileloc  "c-family/c-common.c" 5536)
     nil )
    (!pair  "const_char_p"
     (!type already_seen 11)
-    (!srcfileloc  "c-family/c-common.c" 5531)
+    (!srcfileloc  "c-family/c-common.c" 5536)
     nil )
   )
  )
@@ -25357,31 +25357,31 @@
    (!type already_seen 1770)
   )
   gc_pointed_to "vec<tree_gc_vec,va_gc>"
-  (!srcfileloc  "c-family/c-common.c" 7818)
+  (!srcfileloc  "c-family/c-common.c" 7823)
   (!fields 2 
    (!pair  "va_gc"
     (!type already_seen 79)
-    (!srcfileloc  "c-family/c-common.c" 7818)
+    (!srcfileloc  "c-family/c-common.c" 7823)
     nil )
    (!pair  "tree_gc_vec"
     (!type already_seen 84)
-    (!srcfileloc  "c-family/c-common.c" 7818)
+    (!srcfileloc  "c-family/c-common.c" 7823)
     nil )
   )
  )
  
  (!type user_struct 1772 nil  gc_unused "hash_set<char*,false,nofree_string_hash>"
-  (!srcfileloc  "c-family/c-common.c" 8767)
+  (!srcfileloc  "c-family/c-common.c" 8772)
   (!fields 2 
    (!pair  "nofree_string_hash"
     (!type undefined 1773 nil  gc_unused "nofree_string_hash"
-     (!srcfileloc  "c-family/c-common.c" 8767)
+     (!srcfileloc  "c-family/c-common.c" 8772)
     )
-    (!srcfileloc  "c-family/c-common.c" 8767)
+    (!srcfileloc  "c-family/c-common.c" 8772)
     nil )
    (!pair  "false"
     (!type already_seen 876)
-    (!srcfileloc  "c-family/c-common.c" 8767)
+    (!srcfileloc  "c-family/c-common.c" 8772)
     nil )
   )
  )
@@ -25389,7 +25389,7 @@
  (!type already_seen 1773)
  
  (!type user_struct 1774 nil  gc_unused "hash_map<char*,per_file_includes_t*>"
-  (!srcfileloc  "c-family/c-common.c" 8772)
+  (!srcfileloc  "c-family/c-common.c" 8777)
   (!fields 1 
    (!pair  "per_file_includes_t"
     (!type pointer 1775 nil  gc_unused
@@ -25399,7 +25399,7 @@
       (!fields 0 )
       nil 0 nil nil )
     )
-    (!srcfileloc  "c-family/c-common.c" 8772)
+    (!srcfileloc  "c-family/c-common.c" 8777)
     nil )
   )
  )
@@ -27898,7 +27898,7 @@
   nil 0 nil nil )
  
  (!type struct 2050 nil  gc_used "module_hasher"
-  (!srcfileloc  "fortran/trans-decl.c" 5142)
+  (!srcfileloc  "fortran/trans-decl.c" 5143)
   (!fields 0 )
   nil 32 nil nil )
  
@@ -27907,11 +27907,11 @@
    (!type already_seen 2051)
   )
   gc_pointed_to "hash_table<module_hasher>"
-  (!srcfileloc  "fortran/trans-decl.c" 5142)
+  (!srcfileloc  "fortran/trans-decl.c" 5143)
   (!fields 1 
    (!pair  "module_hasher"
     (!type already_seen 2050)
-    (!srcfileloc  "fortran/trans-decl.c" 5142)
+    (!srcfileloc  "fortran/trans-decl.c" 5143)
     nil )
   )
  )
@@ -28687,11 +28687,11 @@
   nil )
  (!pair  "module_hasher"
   (!type already_seen 2050)
-  (!srcfileloc  "fortran/trans-decl.c" 5142)
+  (!srcfileloc  "fortran/trans-decl.c" 5143)
   nil )
  (!pair  "hash_table<module_hasher>"
   (!type already_seen 2051)
-  (!srcfileloc  "fortran/trans-decl.c" 5142)
+  (!srcfileloc  "fortran/trans-decl.c" 5143)
   nil )
  (!pair  "tree_frame_info"
   (!type already_seen 660)
@@ -29221,39 +29221,39 @@
   nil )
  (!pair  "added_includes_t"
   (!type already_seen 1774)
-  (!srcfileloc  "c-family/c-common.c" 8772)
+  (!srcfileloc  "c-family/c-common.c" 8777)
   nil )
  (!pair  "hash_map<char*,per_file_includes_t*>"
   (!type already_seen 1774)
-  (!srcfileloc  "c-family/c-common.c" 8772)
+  (!srcfileloc  "c-family/c-common.c" 8777)
   nil )
  (!pair  "per_file_includes_t"
   (!type already_seen 1772)
-  (!srcfileloc  "c-family/c-common.c" 8767)
+  (!srcfileloc  "c-family/c-common.c" 8772)
   nil )
  (!pair  "nofree_string_hash"
   (!type already_seen 1773)
-  (!srcfileloc  "c-family/c-common.c" 8767)
+  (!srcfileloc  "c-family/c-common.c" 8772)
   nil )
  (!pair  "hash_set<char*,false,nofree_string_hash>"
   (!type already_seen 1772)
-  (!srcfileloc  "c-family/c-common.c" 8767)
+  (!srcfileloc  "c-family/c-common.c" 8772)
   nil )
  (!pair  "vec<tree_gc_vec,va_gc>"
   (!type already_seen 1770)
-  (!srcfileloc  "c-family/c-common.c" 7818)
+  (!srcfileloc  "c-family/c-common.c" 7823)
   nil )
  (!pair  "tree_gc_vec"
   (!type already_seen 84)
-  (!srcfileloc  "c-family/c-common.c" 7817)
+  (!srcfileloc  "c-family/c-common.c" 7822)
   nil )
  (!pair  "vec<const_char_p,va_gc>"
   (!type already_seen 1768)
-  (!srcfileloc  "c-family/c-common.c" 5531)
+  (!srcfileloc  "c-family/c-common.c" 5536)
   nil )
  (!pair  "const_char_p"
   (!type already_seen 9)
-  (!srcfileloc  "c-family/c-common.c" 5530)
+  (!srcfileloc  "c-family/c-common.c" 5535)
   nil )
  (!pair  "c_binding_ptr"
   (!type already_seen 644)
@@ -32692,7 +32692,7 @@
   nil )
  (!pair  "module_htab"
   (!type already_seen 2052)
-  (!srcfileloc  "fortran/trans-decl.c" 5142)
+  (!srcfileloc  "fortran/trans-decl.c" 5143)
   nil )
  (!pair  "saved_local_decls"
   (!type already_seen 23)
@@ -33460,24 +33460,24 @@
  )
  (!pair  "tree_vector_cache"
   (!type already_seen 1771)
-  (!srcfileloc  "c-family/c-common.c" 7818)
+  (!srcfileloc  "c-family/c-common.c" 7823)
   (!options 
    (!option deletable string  "")
   )
  )
  (!pair  "optimize_args"
   (!type already_seen 1769)
-  (!srcfileloc  "c-family/c-common.c" 5531)
+  (!srcfileloc  "c-family/c-common.c" 5536)
   nil )
  (!pair  "compound_literal_number"
   (!type already_seen 2)
-  (!srcfileloc  "c-family/c-common.c" 4481)
+  (!srcfileloc  "c-family/c-common.c" 4486)
   nil )
  (!pair  "built_in_attributes"
   (!type array 2155 nil  gc_used "(int) ATTR_LAST" 
    (!type already_seen 23)
   )
-  (!srcfileloc  "c-family/c-common.c" 3768)
+  (!srcfileloc  "c-family/c-common.c" 3773)
   nil )
  (!pair  "ext_block"
   (!type already_seen 23)
