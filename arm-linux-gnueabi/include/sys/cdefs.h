@@ -81,7 +81,7 @@
 #  define __NTH(fct)	__attribute__ ((__nothrow__ __LEAF)) fct
 #  define __NTHNL(fct)  __attribute__ ((__nothrow__)) fct
 # else
-#  if defined __cplusplus && (__GNUC_PREREQ (2,8) || __clang_major >= 4)
+#  if defined __cplusplus && (__GNUC_PREREQ (2,8) || __clang_major__ >= 4)
 #   if __cplusplus >= 201103L
 #    define __THROW	noexcept (true)
 #   else
@@ -152,6 +152,7 @@
 # define __glibc_objsize(__o) __bos (__o)
 #endif
 
+#if __USE_FORTIFY_LEVEL > 0
 /* Compile time conditions to choose between the regular, _chk and _chk_warn
    variants.  These conditions should get evaluated to constant and optimized
    away.  */
@@ -187,7 +188,7 @@
    ? __ ## f ## _alias (__VA_ARGS__)					      \
    : (__glibc_unsafe_len (__l, __s, __osz)				      \
       ? __ ## f ## _chk_warn (__VA_ARGS__, __osz)			      \
-      : __ ## f ## _chk (__VA_ARGS__, __osz)))			      \
+      : __ ## f ## _chk (__VA_ARGS__, __osz)))
 
 /* Fortify function f, where object size argument passed to f is the number of
    elements and not total size.  */
@@ -197,7 +198,8 @@
    ? __ ## f ## _alias (__VA_ARGS__)					      \
    : (__glibc_unsafe_len (__l, __s, __osz)				      \
       ? __ ## f ## _chk_warn (__VA_ARGS__, (__osz) / (__s))		      \
-      : __ ## f ## _chk (__VA_ARGS__, (__osz) / (__s))))		      \
+      : __ ## f ## _chk (__VA_ARGS__, (__osz) / (__s))))
+#endif
 
 #if __GNUC_PREREQ (4,3)
 # define __warnattr(msg) __attribute__((__warning__ (msg)))

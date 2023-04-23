@@ -3271,8 +3271,8 @@ Here is a table summarizing what all the different conversions do:
 ‘%b’, ‘%B’
      Print an integer as an unsigned binary number.  ‘%b’ uses
      lower-case ‘b’ with the ‘#’ flag and ‘%B’ uses upper-case.  ‘%b’ is
-     an ISO C2X feature; ‘%B’ is an extension recommended by ISO C2X.
-     *Note Integer Conversions::, for details.
+     an ISO C2X feature; ‘%B’ is an optional ISO C2X feature.  *Note
+     Integer Conversions::, for details.
 
 ‘%o’
      Print an integer as an unsigned octal number.  *Note Integer
@@ -3838,8 +3838,11 @@ way to make sure you have all the right prototypes is to just include
      The return value is the number of characters which would be
      generated for the given input, excluding the trailing null.  If
      this value is greater than or equal to SIZE, not all characters
-     from the result have been stored in S.  You should try again with a
-     bigger output string.  Here is an example of doing this:
+     from the result have been stored in S.  If this happens, you should
+     be wary of using the truncated result as that could lead to
+     security, encoding, or other bugs in your program (*note Truncating
+     Strings::).  Instead, you should try again with a bigger output
+     string.  Here is an example of doing this:
 
           /* Construct a message describing the value of a variable
              whose name is NAME and whose value is VALUE. */
@@ -4978,8 +4981,8 @@ the formats that the C language defines for specifying an integer
 constant.  The syntax that is recognized is the same as that for the
 ‘strtol’ function (*note Parsing of Integers::) with the value ‘0’ for
 the BASE argument.  (You can print integers in this syntax with ‘printf’
-by using the ‘#’ flag character with the ‘%x’, ‘%o’, or ‘%d’ conversion.
-*Note Integer Conversions::.)
+by using the ‘#’ flag character with the ‘%x’, ‘%o’, ‘%b’, or ‘%d’
+conversion.  *Note Integer Conversions::.)
 
    For example, any of the strings ‘10’, ‘0xa’, or ‘012’ could be read
 in as integers under the ‘%i’ conversion.  Each of these specifies a

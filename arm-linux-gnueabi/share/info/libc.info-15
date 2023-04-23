@@ -2273,12 +2273,6 @@ if ‘CFLAGS’ is specified it must enable optimization.  For example:
      library will still be usable, but functionality may be lost—for
      example, you can’t build a shared libc with old binutils.
 
-‘--with-default-link’
-     With ‘--with-default-link’, the build system does not use a custom
-     linker script for linking shared objects.  The default is
-     ‘--without-default-link’, because the custom linker script is
-     needed for full RELRO protection.
-
 ‘--with-nonshared-cflags=CFLAGS’
      Use additional compiler flags CFLAGS to build the parts of the
      library which are always statically linked into applications and
@@ -2417,25 +2411,6 @@ if ‘CFLAGS’ is specified it must enable optimization.  For example:
      By default for x86_64, the GNU C Library is built with the vector
      math library.  Use this option to disable the vector math library.
 
-‘--enable-tunables’
-     Tunables support allows additional library parameters to be
-     customized at runtime.  This feature is enabled by default.  This
-     option can take the following values:
-
-     ‘yes’
-          This is the default if no option is passed to configure.  This
-          enables tunables and selects the default frontend (currently
-          ‘valstring’).
-
-     ‘no’
-          This option disables tunables.
-
-     ‘valstring’
-          This enables tunables and selects the ‘valstring’ frontend for
-          tunables.  This frontend allows users to specify tunables as a
-          colon-separated list in a single environment variable
-          ‘GLIBC_TUNABLES’.
-
 ‘--disable-crypt’
      Do not install the passphrase-hashing library ‘libcrypt’ or the
      header file ‘crypt.h’.  ‘unistd.h’ will still declare the function
@@ -2446,12 +2421,6 @@ if ‘CFLAGS’ is specified it must enable optimization.  For example:
      This option is for hackers and distributions experimenting with
      independently-maintained implementations of libcrypt.  It may
      become the default in a future release.
-
-‘--disable-experimental-malloc’
-     By default, a per-thread cache is enabled in ‘malloc’.  While this
-     cache can be disabled on a per-application basis using tunables
-     (set glibc.malloc.tcache_count to zero), this option can be used to
-     remove it from the build completely.
 
 ‘--disable-scv’
      Disable using ‘scv’ instruction for syscalls.  All syscalls will
@@ -3119,6 +3088,9 @@ call to its hardened variant that does additional safety checks at
 runtime.  Some hardened variants need the size of the buffer to perform
 access validation and this is provided by the ‘__builtin_object_size’ or
 the ‘__builtin_dynamic_object_size’ builtin functions.
+‘_FORTIFY_SOURCE’ also enables additional compile time diagnostics, such
+as unchecked return values from some functions, to encourage developers
+to add error checking for those functions.
 
    At runtime, if any of those safety checks fail, the program will
 terminate with a ‘SIGABRT’ signal.  ‘_FORTIFY_SOURCE’ may be defined to
@@ -3962,17 +3934,31 @@ operating system are declared in ‘sys/platform/x86.h’.
 
    • ‘AMX_BF16’ – Tile computational operations on bfloat16 numbers.
 
+   • ‘AMX_COMPLEX’ – Tile computational operations on complex FP16
+     numbers.
+
    • ‘AMX_INT8’ – Tile computational operations on 8-bit numbers.
+
+   • ‘AMX_FP16’ – Tile computational operations on FP16 numbers.
 
    • ‘AMX_TILE’ – Tile architecture.
 
    • ‘ARCH_CAPABILITIES’ – IA32_ARCH_CAPABILITIES MSR.
 
+   • ‘ArchPerfmonExt’ – Architectural Performance Monitoring Extended
+     Leaf (EAX = 23H).
+
    • ‘AVX’ – The AVX instruction extensions.
 
    • ‘AVX2’ – The AVX2 instruction extensions.
 
+   • ‘AVX_IFMA’ – The AVX-IFMA instruction extensions.
+
+   • ‘AVX_NE_CONVERT’ – The AVX-NE-CONVERT instruction extensions.
+
    • ‘AVX_VNNI’ – The AVX-VNNI instruction extensions.
+
+   • ‘AVX_VNNI_INT8’ – The AVX-VNNI-INT8 instruction extensions.
 
    • ‘AVX512_4FMAPS’ – The AVX512_4FMAPS instruction extensions.
 
@@ -4015,6 +4001,8 @@ operating system are declared in ‘sys/platform/x86.h’.
 
    • ‘BMI2’ – BMI2 instructions.
 
+   • ‘BUS_LOCK_DETECT’ – Bus lock debug exceptions.
+
    • ‘CLDEMOTE’ – CLDEMOTE instruction.
 
    • ‘CLFLUSHOPT’ – CLFLUSHOPT instruction.
@@ -4024,6 +4012,8 @@ operating system are declared in ‘sys/platform/x86.h’.
    • ‘CLWB’ – CLWB instruction.
 
    • ‘CMOV’ – Conditional Move instructions.
+
+   • ‘CMPCCXADD’ – CMPccXADD instruction.
 
    • ‘CMPXCHG16B’ – CMPXCHG16B instruction.
 
@@ -4092,11 +4082,17 @@ operating system are declared in ‘sys/platform/x86.h’.
 
    • ‘KL’ – AES Key Locker instructions.
 
-   • ‘LAM’ – Linear Address Masking.
-
    • ‘L1D_FLUSH’ – IA32_FLUSH_CMD MSR.
 
+   • ‘LA57’ – 57-bit linear addresses and five-level paging.
+
    • ‘LAHF64_SAHF64’ – LAHF/SAHF available in 64-bit mode.
+
+   • ‘LAM’ – Linear Address Masking.
+
+   • ‘LASS’ – Linear Address Space Separation.
+
+   • ‘LBR’ – Architectural LBR.
 
    • ‘LM’ – Long mode.
 
@@ -4123,6 +4119,8 @@ operating system are declared in ‘sys/platform/x86.h’.
    • ‘MPX’ – Intel Memory Protection Extensions.
 
    • ‘MSR’ – Model Specific Registers RDMSR and WRMSR instructions.
+
+   • ‘MSRLIST’ – RDMSRLIST/WRMSRLIST instructions and IA32_BARRIER MSR.
 
    • ‘MTRR’ – Memory Type Range Registers.
 
@@ -4162,6 +4160,8 @@ operating system are declared in ‘sys/platform/x86.h’.
 
    • ‘PREFETCHWT1’ – PREFETCHWT1 instruction.
 
+   • ‘PREFETCHI’ – PREFETCHIT0/1 instructions.
+
    • ‘PSE’ – Page Size Extension.
 
    • ‘PSE_36’ – 36-Bit Page Size Extension.
@@ -4169,6 +4169,8 @@ operating system are declared in ‘sys/platform/x86.h’.
    • ‘PSN’ – Processor Serial Number.
 
    • ‘PTWRITE’ – PTWRITE instruction.
+
+   • ‘RAO_INT’ – RAO-INT instructions.
 
    • ‘RDPID’ – RDPID instruction.
 
@@ -4189,6 +4191,8 @@ operating system are declared in ‘sys/platform/x86.h’.
    • ‘RTM_ALWAYS_ABORT’ – Transactions always abort, making RTM
      unusable.
 
+   • ‘RTM_FORCE_ABORT’ – TSX_FORCE_ABORT MSR.
+
    • ‘SDBG’ – IA32_DEBUG_INTERFACE MSR for silicon debug.
 
    • ‘SEP’ – SYSENTER and SYSEXIT instructions.
@@ -4196,6 +4200,8 @@ operating system are declared in ‘sys/platform/x86.h’.
    • ‘SERIALIZE’ – SERIALIZE instruction.
 
    • ‘SGX’ – Intel Software Guard Extensions.
+
+   • ‘SGX_KEYS’ – Attestation Services for SGX.
 
    • ‘SGX_LC’ – SGX Launch Configuration.
 
@@ -4267,6 +4273,8 @@ operating system are declared in ‘sys/platform/x86.h’.
    • ‘WBNOINVD’ – WBINVD/WBNOINVD instructions.
 
    • ‘WIDE_KL’ – AES wide Key Locker instructions.
+
+   • ‘WRMSRNS’ – WRMSRNS instruction.
 
    • ‘X2APIC’ – x2APIC.
 
