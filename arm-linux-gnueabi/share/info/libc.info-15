@@ -2683,6 +2683,9 @@ build the GNU C Library:
      For s390x architecture builds, GCC 7.1 or higher is needed (See gcc
      Bug 98269).
 
+     For AArch64 architecture builds with mathvec enabled, GCC 10 or
+     higher is needed due to dependency on arm_sve.h.
+
      For multi-arch support it is recommended to use a GCC which has
      been built with support for GNU indirect functions.  This ensures
      that correct debugging information is generated for functions
@@ -3864,7 +3867,13 @@ File: libc.info,  Node: RISC-V,  Next: X86,  Prev: PowerPC,  Up: Platform
 E.2 RISC-V-specific Facilities
 ==============================
 
-Cache management facilities specific to RISC-V systems that implement
+Functions that are lazily bound must be compatible with the standard
+calling convention.  When a function is annotated with
+STO_RISCV_VARIANT_CC, it means this function is not compatible with the
+standard calling convention.  The dynamic linker will directly resolve
+it instead of using the lazy binding mechanism.
+
+   Cache management facilities specific to RISC-V systems that implement
 the Linux ABI are declared in ‘sys/cachectl.h’.
 
  -- Function: void __riscv_flush_icache (void *START, void *END,
