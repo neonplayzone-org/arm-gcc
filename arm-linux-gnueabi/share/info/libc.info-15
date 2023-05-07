@@ -1612,6 +1612,7 @@ START-INFO-DIR-ENTRY
 * posix_fallocate64: (libc)Storage Allocation.
 * posix_fallocate: (libc)Storage Allocation.
 * posix_memalign: (libc)Aligned Memory Blocks.
+* posix_openpt: (libc)Allocation.
 * pow: (libc)Exponents and Logarithms.
 * powf: (libc)Exponents and Logarithms.
 * powfN: (libc)Exponents and Logarithms.
@@ -2681,6 +2682,9 @@ build the GNU C Library:
 
      For s390x architecture builds, GCC 7.1 or higher is needed (See gcc
      Bug 98269).
+
+     For AArch64 architecture builds with mathvec enabled, GCC 10 or
+     higher is needed due to dependency on arm_sve.h.
 
      For multi-arch support it is recommended to use a GCC which has
      been built with support for GNU indirect functions.  This ensures

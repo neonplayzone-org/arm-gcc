@@ -848,10 +848,10 @@ GNU C library functions and macros
 * fMxsubfNx: (libc)Misc FP Arithmetic.
 * fMxsubfN: (libc)Misc FP Arithmetic.
 * fnmatch: (libc)Wildcard Matching.
+* fopen64: (libc)Opening Streams.
 * FOPEN_MAX: (libc)Opening Streams.
 * fopencookie: (libc)Streams and Cookies.
 * fopen: (libc)Opening Streams.
-* fopen64: (libc)Opening Streams.
 * forkpty: (libc)Pseudo-Terminal Pairs.
 * fork: (libc)Creating a Process.
 * FP_ILOGB0: (libc)Exponents and Logarithms.
@@ -957,10 +957,10 @@ GNU C library functions and macros
 * getgroups: (libc)Reading Persona.
 * gethostbyaddr_r: (libc)Host Names.
 * gethostbyaddr: (libc)Host Names.
-* gethostbyname2_r: (libc)Host Names.
-* gethostbyname2: (libc)Host Names.
 * gethostbyname_r: (libc)Host Names.
 * gethostbyname: (libc)Host Names.
+* gethostbyname2_r: (libc)Host Names.
+* gethostbyname2: (libc)Host Names.
 * gethostent: (libc)Host Names.
 * gethostid: (libc)Host Identification.
 * gethostname: (libc)Host Identification.
@@ -1035,10 +1035,10 @@ GNU C library functions and macros
 * getwc: (libc)Character Input.
 * getwd: (libc)Working Directory.
 * getw: (libc)Character Input.
+* glob64: (libc)Calling Glob.
 * globfree: (libc)More Flags for Globbing.
 * globfree64: (libc)More Flags for Globbing.
 * glob: (libc)Calling Glob.
-* glob64: (libc)Calling Glob.
 * gmtime_r: (libc)Broken-down Time.
 * gmtime: (libc)Broken-down Time.
 * grantpt: (libc)Allocation.
@@ -1246,6 +1246,7 @@ GNU C library functions and macros
 * log1pf: (libc)Exponents and Logarithms.
 * log1pl: (libc)Exponents and Logarithms.
 * log1p: (libc)Exponents and Logarithms.
+* log2fNx: (libc)Exponents and Logarithms.
 * log2fN: (libc)Exponents and Logarithms.
 * log2f: (libc)Exponents and Logarithms.
 * log2: (libc)Exponents and Logarithms.
@@ -1263,7 +1264,6 @@ GNU C library functions and macros
 * logout: (libc)Logging In and Out.
 * logwtmp: (libc)Logging In and Out.
 * log: (libc)Exponents and Logarithms.
-* log2fNx: (libc)Exponents and Logarithms.
 * log2l: (libc)Exponents and Logarithms.
 * longjmp: (libc)Non-Local Details.
 * lrand48_r: (libc)SVID Random.
@@ -1460,13 +1460,13 @@ GNU C library functions and macros
 * on_exit: (libc)Cleanups on Exit.
 * ONLCR: (libc)Output Modes.
 * ONOEOT: (libc)Output Modes.
-* open64: (libc)Opening and Closing Files.
 * OPEN_MAX: (libc)General Limits.
 * open_memstream: (libc)String Streams.
 * opendir: (libc)Opening a Directory.
 * openlog: (libc)openlog.
 * openpty: (libc)Pseudo-Terminal Pairs.
 * open: (libc)Opening and Closing Files.
+* open64: (libc)Opening and Closing Files.
 * OPOST: (libc)Output Modes.
 * OXTABS: (libc)Output Modes.
 * P_tmpdir: (libc)Temporary Files.
@@ -1497,6 +1497,7 @@ GNU C library functions and macros
 * posix_fallocate: (libc)Storage Allocation.
 * posix_fallocate64: (libc)Storage Allocation.
 * posix_memalign: (libc)Aligned Memory Blocks.
+* posix_openpt: (libc)Allocation.
 * powfNx: (libc)Exponents and Logarithms.
 * powfN: (libc)Exponents and Logarithms.
 * powf: (libc)Exponents and Logarithms.
